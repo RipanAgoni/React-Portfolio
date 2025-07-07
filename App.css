@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+body {
+    background-color: #1a202c;
+    /* Dark background color */
+    color: #e2e8f0;
+    /* Light text color for readability */
+    font-family: 'Inter', sans-serif;
+    /* Default font */
+    overflow: hidden;
+    /* Prevent scrollbar due to particles.js */
+}
+
+/* Styles for the particles container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1a202c;
+    /* Background color for particles */
+    z-index: 0;
+    /* Ensure particles are behind content */
+}
+
+/* Specific styles for the Portfolio component structure */
+.portfolio-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    /* Full viewport height */
+    position: relative;
+    /* For z-indexing content above particles */
+    z-index: 1;
+}
+
+/* Custom styling for button gradient */
+.gradient-button {
+    background: linear-gradient(to left, #1595b6, #1f2667e6);
+    transition: all 0.1s ease-in-out;
+}
+
+.gradient-button:hover {
+    transform: scale(1.1);
+}
+
+/* Ensure SVGs inherit color correctly if needed, or apply directly */
+svg {
+    color: currentColor;
+    /* Allows utility classes like text-[#b0b2c3] to work */
+}
+
+.resume-container {
+    background-color: #2d3748;
+    /* Slightly lighter dark shade for the resume container */
+    border-radius: 0.75rem;
+    /* Rounded corners for the main container */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow for depth */
+    overflow-y: auto;
+    max-height: 90vh;
+    /* Adjust as needed to fit content on screen */
+}
+
+/* Custom scrollbar styles */
+.resume-container::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
+}
+
+.resume-container::-webkit-scrollbar-track {
+    background: #2d3748;
+    /* Color of the track */
+    border-radius: 10px;
+}
+
+.resume-container::-webkit-scrollbar-thumb {
+    background: #4a5568;
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+}
+
+.resume-container::-webkit-scrollbar-thumb:hover {
+    background: #6a7588;
+    /* Color of the scrollbar thumb on hover */
+}
+
+.profile-pic {
+    border-radius: 50%;
+    /* Makes the profile picture circular */
+    border: 4px solid #fbbf24;
+    /* Amber colored border around the profile picture */
+    width: 150px;
+    /* Fixed width for the image */
+    height: 150px;
+    /* Fixed height for the image */
+    object-fit: cover;
+    /* Ensures the image covers the area without distortion */
+}
+
+.section-title {
+    color: #fbbf24;
+    /* Amber color for all section titles */
+    padding-bottom: 0.5rem;
+    /* Padding below the title */
+    margin-bottom: 1rem;
+    /* Margin below the title */
+    border-bottom: 2px solid #4a5568;
+    /* A subtle dark border to separate sections */
+    font-weight: 700;
+    /* Bold font weight for titles */
+}
+
+.skill-tag {
+    background-color: #4a5568;
+    /* Darker background for skill tags */
+    color: #e2e8f0;
+    /* Light text color for skill tags */
+    border-radius: 9999px;
+    /* Fully rounded corners for pill-shaped tags */
+    padding: 0.25rem 0.75rem;
+    /* Padding inside the tags */
+}
+
+a {
+    color: #90cdf4;
+    /* Light blue color for all links */
+    text-decoration: none;
+    /* No underline by default */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Underline on hover for links */
+    color: #d1d5db;
+    /* Lighter gray on hover for better feedback */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .profile-pic {
+        margin-bottom: 1.5rem;
+        /* Add some space below the picture on small screens */
+    }
+
+    .text-5xl {
+        font-size: 3rem;
+        /* Adjust font size for name on smaller screens */
+    }
+
+    .text-xl {
+        font-size: 1.25rem;
+        /* Adjust font size for title on smaller screens */
+    }
+}
